@@ -126,14 +126,9 @@ if __name__ == "__main__":
     # unhelpful, but again, this is personal preference.
     base_url = "http://localhost:1337"
     cookie = "s%3AsefxupOftreBbHCfgSfSATY4BEpc6eyk.PSG9PLp0BOGxwypBb3mut7U9pRiafoHGMoTdcn%2F%2BLm4"
-   # task_id = "5ef5132195b2030630fe153a"
     api = API(base_url)
     response = api.read_all_tasks(cookie)
-    #response = api.create_task(cookie, "Test the API", "2020-02-20")
-    #response = api.update_task(cookie, task_id, "false")
-    #response = api.delete_task(cookie, task_id)
-    #response = api.read_current_user(cookie)
     print(response.ok)
     print(response.status_code)
     print(response.text)
-   # print(response.json())
+  
