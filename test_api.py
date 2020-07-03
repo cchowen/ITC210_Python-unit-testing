@@ -44,7 +44,7 @@ class TestAPI(unittest.TestCase):
 
     # update these two values with your own.
     base_url = "http://localhost:1337"
-    cookie = "s%3AMZFywhP2Z9wbDXIpujpERv2FBoNrau8f.VVifJTp6j8j58wUBP3R8cKr1uXeueas5AE4cp1JLThU"
+    cookie = "s%3AsefxupOftreBbHCfgSfSATY4BEpc6eyk.PSG9PLp0BOGxwypBb3mut7U9pRiafoHGMoTdcn%2F%2BLm4"
 
     # This will be run once, when you start your tests.
     @classmethod
@@ -130,7 +130,6 @@ class TestAPI(unittest.TestCase):
         self.api.delete_task(self.cookie, task["_id"])
         self.assertTrue(resp.ok, msg="The delete function failed")
         response = self.api.read_task(self.cookie, current_task)
-        #print(response.status_code)
         self.assertFalse(response.ok,msg="Attempt to read a deleted task succeeded illegally.")
 
     def test_read_current_user(self):
