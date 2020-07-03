@@ -1,6 +1,6 @@
 <h1>How to use these scripts</h1>
 
-The api.py file defines the CRUD operations which interact with an API hosted at the listed address. Using the requests module, a provided URL, and a  pre-authorized cookie, it makes authenticated HTTP requests to the server, which are then called and used by test_api.py to perform unit tests on the API.
+The api.py file defines the CRUD operations which interact with an API hosted at the listed address. Using the *requests* module, a provided URL, and a pre-authorized cookie, it makes authenticated HTTP requests to the server, which are then called and used by test_api.py to perform unit tests on the API.
 
 <h2>How to use a pre-authorized cookie</h2>
 Because the API uses Google Authentication, you will need to provide a cookie to authorize the Python script when making HTTP requests. Do this by definining the cookie in both the api.py and test_api.py files. 
@@ -20,8 +20,8 @@ Congratulations, your script is now authorized to make HTTP requests! Note that 
 <h2>How to run the code</h2>
 To run one of these files, open a terminal and navigate to the C:\Users\Kit\Documents\GitHub\lab-6a> directory (opening this folder in Visual Studio Code is the easiest way to do this). Once in this directory, you can run either script by prefacing the script name with "python" like so:
 
-python api.py
-python test_api.py
+<pre><code>python api.py</pre></code>
+<pre><code>python test_api.py</pre></code>
 
 That's it! The terminal will then output the results of the script, making it easy to see what happened and whether or not it worked. If you receive a 401 Unauthorized error, it means you need to refresh the cookie in one or both of the scripts. 
 
