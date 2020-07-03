@@ -8,7 +8,7 @@ Because the API uses Google Authentication, you will need to provide a cookie to
 <h2>How to get a pre-authorized cookie</h2>
 You can obtain an authorized cookie by logging into the to-do website. Since the liver server infrastructure is down, this is now done locally. 
   Note that this can be done with only the back-end code (lab-5B) running, but the front-end (vue-5B) presents a nice user interface. 
-With lab-5B and vue-5B running, navigate to the project webpage at http://localhost:1337/api/v1/auth/google or http://localhost:8080/login. You will prompted to log in via Google. Make sure you do so with the Google Account previously registered with the Azure database of users from previous projects.
+With lab-5B and vue-5B running, navigate to the project webpage at http://localhost:1337/api/v1/auth/google or http://localhost:8080/login. You will be prompted to log in via Google. Make sure you do so with the Google Account previously registered with the Azure database of users from previous projects.
 Once you have logged in and are presented with your very own (probably empty) task list, open your web browser's dev tools (this can easily be done with the F12 key). 
 Navigate to the Application tab of the developer tools.
 Go to the Storage sub-section on the left and click on the "Cookies" drop-down menu.
