@@ -34,6 +34,12 @@ class API(object):
         return response
 
     def read_all_tasks(self, cookie):
+        """ Read all tasks for the current user 
+        Parameters:
+            cookie (str): Pre-authorized cookie
+        Returns:
+            Response from the server
+        """
         url = urljoin(self.base_url, "api/v1/items")
         payload = {}
         headers = {
@@ -43,6 +49,14 @@ class API(object):
         return response
 
     def read_task(self, cookie, task_id):
+        """ Fetch a task with the provided task ID
+        Parameters:
+            cookie (str): Pre-authorized cookie
+            task_id (str): The "_id" attribute of a task stored in the database,
+            used to find a specific task
+        Returns:
+            Response from the server
+        """ 
         url = urljoin(self.base_url, f"api/v1/items/{task_id}")
         payload = {}
         headers = {
@@ -52,6 +66,16 @@ class API(object):
         return response
 
     def update_task(self, cookie, task_id, Done):
+        """ Update a task with the provided task ID
+        Parameters:
+            cookie (str): Pre-authorized cookie
+            task_id (str): The "_id" attribute of a task stored in the database,
+            used to find a specific task
+            Done (Boolean): The "Done" attribute of a task, used to indicate whether or not a task
+            has been completed
+        Returns:
+            Response from the server    
+        """
         url = urljoin(self.base_url, f"api/v1/items/{task_id}")
         data = '{ "Done": "%s"}' % (Done)
         headers = {
@@ -62,6 +86,14 @@ class API(object):
         return response
 
     def delete_task(self, cookie, task_id):
+        """ Delete a task with the provided task ID
+        Parameters:
+            cookie (str): Pre-authorized cookie
+            task_id (str): The "_id" attribute of a task stored in the database,
+            used to find a specific task
+        Returns:
+            Response from the server
+        """ 
         url = urljoin(self.base_url, f"api/v1/items/{task_id}")
         payload = {}
         headers = {
@@ -71,6 +103,12 @@ class API(object):
         return response
 
     def read_current_user(self, cookie):
+        """ Fetch the current logged-in user from the database
+        Parameters:
+            cookie (str): Pre-authorized cookie
+        Returns:
+            Response from the server
+        """
         url = urljoin(self.base_url, "api/v1/user")
         payload = {}
         headers = {
@@ -87,7 +125,7 @@ if __name__ == "__main__":
     # many `print()`s, the output becomes overloaded and
     # unhelpful, but again, this is personal preference.
     base_url = "http://localhost:1337"
-    cookie = "s%3AUHa9OUHESD2ExiruFxhUJCO7ZErC_J1H.CIPhydViN%2Bf48kUSGvbSIVIbW5sApwmUJB5xKzRswSk"
+    cookie = "s%3AsefxupOftreBbHCfgSfSATY4BEpc6eyk.PSG9PLp0BOGxwypBb3mut7U9pRiafoHGMoTdcn%2F%2BLm4"
    # task_id = "5ef5132195b2030630fe153a"
     api = API(base_url)
     response = api.read_all_tasks(cookie)

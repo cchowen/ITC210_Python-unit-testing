@@ -44,7 +44,7 @@ class TestAPI(unittest.TestCase):
 
     # update these two values with your own.
     base_url = "http://localhost:1337"
-    cookie = "s%3AUHa9OUHESD2ExiruFxhUJCO7ZErC_J1H.CIPhydViN%2Bf48kUSGvbSIVIbW5sApwmUJB5xKzRswSk"
+    cookie = "s%3AMZFywhP2Z9wbDXIpujpERv2FBoNrau8f.VVifJTp6j8j58wUBP3R8cKr1uXeueas5AE4cp1JLThU"
 
     # This will be run once, when you start your tests.
     @classmethod
