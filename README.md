@@ -18,7 +18,7 @@ Paste the value of the cookie into the definition of cookie in both api.py and t
 Congratulations, your script is now authorized to make HTTP requests! Note that if you log out and back in, you'll need to get a new cookie and update the script again. 
 
 <h2>How to run the code</h2>
-To run one of these files, open a terminal and navigate to the C:\Users\Kit\Documents\GitHub\lab-6a> directory (opening this folder in Visual Studio Code is the easiest way to do this). Once in this directory, you can run either script by prefacing the script name with "python" like so:
+To run one of these files, open a terminal and navigate to the directory for this projecting (opening the folder in Visual Studio Code is the easiest way to do this). Once in this directory, you can run either script by prefacing the script name with "python" like so:
 
 <pre><code>python api.py</pre></code>
 <pre><code>python test_api.py</pre></code>
